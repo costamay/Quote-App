@@ -4,7 +4,7 @@
     <ul>
       <li *ngFor='let quote of quotes' let i = index>
         {{quote.quote}}
-        <app-quote-details [quote]='quote'></app-quote-details>
+        <app-quote-details [quote]='quote'  (isComplete) = 'completeGoal($event,i)'></app-quote-details>
       </li>
     </ul>
   </div>
