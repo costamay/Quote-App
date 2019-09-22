@@ -1,8 +1,4 @@
 export class Quote {
-    id:number;
-    quote: string;
-    author:string;
-    upvote: number;
-    downvote: number;
-    time: Date;
+    
+    constructor(public id:number, public quote:string,public publisher: string, public author: string, public upvote: number, public downvote: number, myDate:Date){}
 }
