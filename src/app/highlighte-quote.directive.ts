@@ -5,6 +5,10 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class HighlighteQuoteDirective {
 
-  constructor() { }
+  constructor(private elem:ElementRef) {}
+    private quoteDeco(action:string){
+    this.elem.nativeElement.style.backgroundColor='yellow';
+  }
+   
 
 }
