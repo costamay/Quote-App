@@ -17,12 +17,10 @@ export class TimeCountPipe implements PipeTransform {
     var hourCounter = (dateDifferenceSeconds/3600)/hoursInDay;
     var dateCounter = dateDifferenceSeconds/secondsInDay;
 
-    if (minCounter<60){
-      return minCounter;
-    }else if(hourCounter<24){
-      return hourCounter;
-    }else {
+    if (dateCounter=>1){
       return dateCounter;
+    }else{
+      return 0
     }
   }
   }
