@@ -1,13 +1,16 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 @Directive({
   selector: '[appHighlighteQuote]'
 })
 export class HighlighteQuoteDirective {
 
-  constructor(private elem:ElementRef) {}
-    private quoteDeco(action:string){
+  constructor(private elem:ElementRef) {
     this.elem.nativeElement.style.backgroundColor='yellow';
+  }
+  
+    private quoteDeco(action:string){
+    
   }
    
 

@@ -12,6 +12,17 @@ export class QuoteDetailsComponent implements OnInit {
   quoteDelete(complete:boolean){
     this.isComplete.emit(complete);
   }
+
+  @Output() isUp = new EventEmitter<boolean>();
+  addUp(add:boolean){
+    this.isUp.emit(add);
+  }
+  @Output() isDown = new EventEmitter<boolean>();
+  addDown(ad:boolean){
+    this.isDown.emit(ad);
+  }
+
+
   constructor() { }
 
   ngOnInit() {

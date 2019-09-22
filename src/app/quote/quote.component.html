@@ -9,12 +9,12 @@
         <p appHighlighteQuote>{{quote.quote}}</p>
         </div>
         <div>
-          <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-details>
+          <app-quote-details [quote]='quote' (isComplete)='deleteQuote($event,i)' (isUp)='adTotal($event,i)' (isDown)='addTotal($event,i)'></app-quote-details>
           </div>
       </div>
     </div>
     <div class="col-md-6">
-        <app-form></app-form>
+        <app-form (addQuote)= "addNewQuote($event)"></app-form>
     </div>
   </div>
 </div>

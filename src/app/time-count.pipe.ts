@@ -5,8 +5,26 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TimeCountPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
+  transform(value: any): number {
+    let today:Date = new Date(); 
+    let todayWithNoTime:any = new Date(today.getFullYear(), today.getMonth(), today.getDate())
+    var dateDifference = Math.abs(value - todayWithNoTime) 
+    const secondsInDay = 86400; 
+    const minutesInDay = 1440;
+    const hoursInDay = 24;
+    var dateDifferenceSeconds = dateDifference*0.001; 
+    var minCounter = (dateDifferenceSeconds/60)/ minutesInDay;
+    var hourCounter = (dateDifferenceSeconds/3600)/hoursInDay;
+    var dateCounter = dateDifferenceSeconds/secondsInDay;
+
+    if (minCounter<60){
+      return minCounter;
+    }else if(hourCounter<24){
+      return hourCounter;
+    }else {
+      return dateCounter;
+    }
+  }
   }
 
-}
+
