@@ -2,8 +2,9 @@
     <h1> WELCOME TO THE LEGENDARY APP QUOTES</h1>
     <p>This is an app that allows you to get quotes from different people around the world. Feel free to add  a quote and rate a quote.</p>
     <ul>
-      <li *ngFor='let quote of quotes'>
+      <li *ngFor='let quote of quotes' let i = index>
         {{quote.quote}}
+        <app-quote-details [quote]='quote'></app-quote-details>
       </li>
     </ul>
   </div>
