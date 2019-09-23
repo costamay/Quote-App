@@ -6,8 +6,10 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes, let i = index'>
         <div>
-        <p appHighlighteQuote ><i class="fa fa-quote-left fa-2x text-dark mr-3"></i> {{quote.quote}} </p>
-       
+        <p appHighlighteQuote *ngIf="loopVote()===quote.upvote && quote.upvote>0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i> {{quote.quote}} </p>
+        <p *ngIf="loopVote()!==quote.upvote || quote.upvote===0"><i class="fa fa-quote-left fa-2x text-dark mr-3"></i>{{quote.quote}}
+        </p>
+         
         </div>
         
         <div>
