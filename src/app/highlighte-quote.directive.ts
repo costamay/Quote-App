@@ -9,9 +9,7 @@ export class HighlighteQuoteDirective {
     this.elem.nativeElement.style.backgroundColor='yellow';
   }
   
-    private quoteDeco(action:string){
     
-  }
    
 
 }
