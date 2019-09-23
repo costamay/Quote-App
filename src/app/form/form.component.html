@@ -7,8 +7,8 @@
         <div class="form-group">
   
             <label for="name">Name</label>
-            <input type="text" required class="form-control" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' >
-            <p [hidden]="name.valid || name.pristine" class="alert alert-danger">
+            <input type="text" required class="form-control" id="publisher" [(ngModel)]="newQuote.publisher" name="publisher" #publisher='ngModel' >
+            <p [hidden]="publisher.valid || publisher.pristine" class="alert alert-danger">
                 <small>Enter Name</small></p>
   
         </div>
@@ -32,7 +32,7 @@
             <p [hidden]="myDate.valid || myDate.pristine" class="alert alert-danger">
                     <small>Pick date</small></p>
         </div>
-        <button type="submit" class="btn btn-success">Submit Quote</button>
+        <button type="submit" class="btn btn-success m-3 btn-lg">Submit Quote</button>
     </form>
     </div>
   </div>
